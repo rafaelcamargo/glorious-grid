@@ -1,0 +1,34 @@
+@require 'gg-var'
+
+clearfix()
+	zoom 1
+	&:after
+		content " "
+		display table
+		clear both
+		
+calcColumnLength()
+	gg-base-width-col*arguments + gg-base-width-gutter*(arguments - 1)
+	
+getPercentLength()
+	arguments/gg-base-width-container * 100%
+
+createVerticalOffsets()
+	for num in (1..5)
+		.gg-voff-{num}
+			margin-top num * 10px
+			
+createHorizontalOffsets()
+	for num in (1..11)
+		.gg-hoff-{num}
+			margin-left getPercentLength(calcColumnLength(num) + gg-base-width-gutter * 2)
+			
+buildColumns()
+	for num in (1..gg-total-cols)
+		.gg-col-{num}
+			width getPercentLength(calcColumnLength(num))
+
+buildGutter()
+	gutter = gg-base-width-gutter/gg-base-width-container * 100%
+	gutter * arguments
+	
