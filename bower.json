@@ -1,0 +1,16 @@
+{
+    "name": "GloriousGrid",
+    "version": "0.1.0",
+    "main": "dist/ggrid.min.css",
+    "keywords": ["grid", "responsive", "fluid", "glorious"],
+    "ignore": [
+        "src",
+        ".git",
+        ".gitignore",
+        "bower.json",
+        "Gruntfile.js",
+        "index.html",
+        "package.json",
+        "README.md"
+    ]
+}

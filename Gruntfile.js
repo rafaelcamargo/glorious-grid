@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          'bin/ggrid.min.css': 'src/*styl',
+          'dist/ggrid.min.css': 'src/*styl',
           'welcome/assets/css/main.css': 'welcome/assets/styl/*.styl'
         }
       }
