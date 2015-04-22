@@ -1,11 +1,11 @@
 {
   "name": "GloriousGrid",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "license": "MIT",
-  "url": "http://rafaelcamargo.com/pro/ggrid/welcome",
+  "url": "http://rafaelcamargo.github.io/glorious-grid/welcome/",
   "repository": {
   	"type": "git",
-  	"url": "https://github.com/rafaelcamargo/gloriousgrid"
+  	"url": "https://github.com/rafaelcamargo/glorious-grid"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
