@@ -1,34 +1,58 @@
 @require 'gg-var'
 
+
+// Twelve Cols Grid Builder
+
+buildColsForTwelveColsGrid()
+	for num in (1..GG_TOTAL_COLS)
+		.gg-col-{num}
+			width getPercentLength(calcColumnLength(num))
+	
+getPercentLength()
+	arguments/GG_BASE_WIDTH_CONTAINER * 100%
+
+calcColumnLength()
+	GG_BASE_WIDTH_COL*arguments + GG_BASE_WIDTH_GUTTER*(arguments - 1)
+
+
+// One Col Grid Builder
+	
+buildColsForOneColGrid()
+	for num in (1..GG_TOTAL_COLS)
+		setColWidthForOneColGrid(num)
+	setMarginTopForSiblingCols(10)
+
+setColWidthForOneColGrid()
+	.gg-col-{arguments}
+		width getPercentLength(calcColumnLength(12))
+
+setMarginTopForSiblingCols()
+	[class*="gg-col"] + [class*="gg-col"]
+		margin-top arguments * 1px;
+
+
+// Helpers
+
 clearfix()
 	zoom 1
 	&:after
 		content " "
 		display table
 		clear both
-		
-calcColumnLength()
-	gg-base-width-col*arguments + gg-base-width-gutter*(arguments - 1)
-	
-getPercentLength()
-	arguments/gg-base-width-container * 100%
 
 createVerticalOffsets()
-	for num in (1..5)
+	for num in (1..10)
 		.gg-voff-{num}
 			margin-top num * 10px
 			
 createHorizontalOffsets()
-	for num in (1..11)
+	for num in (1..GG_TOTAL_COLS - 1)
 		.gg-hoff-{num}
-			margin-left getPercentLength(calcColumnLength(num) + gg-base-width-gutter * 2)
-			
-buildColumns()
-	for num in (1..gg-total-cols)
-		.gg-col-{num}
-			width getPercentLength(calcColumnLength(num))
+			if(arguments == 12)
+				margin-left getPercentLength(calcColumnLength(num) + GG_BASE_WIDTH_GUTTER * 2)
+			else if(arguments == 1)
+				margin-left getPercentLength(GG_BASE_WIDTH_GUTTER)
 
 buildGutter()
-	gutter = gg-base-width-gutter/gg-base-width-container * 100%
+	gutter = GG_BASE_WIDTH_GUTTER/GG_BASE_WIDTH_CONTAINER * 100%
 	gutter * arguments
-	
