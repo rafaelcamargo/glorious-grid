@@ -1,31 +1,30 @@
 @require 'gg-var'
 
 
-// Twelve Cols Grid Builder
+// Columns Builder
 
-buildColsForTwelveColsGrid()
+buildCols()
 	for num in (1..GG_TOTAL_COLS)
-		.gg-col-{num}
-			width getPercentLength(calcColumnLength(num))
-	
+		if(arguments == 12)
+			buildColForTwelveColsGrid(num)
+		else
+			buildColForOneColGrid(num)
+
+buildColForTwelveColsGrid(num)
+	.gg-col-{num}
+		width getPercentLength(calcColumnLength(num))
+
+buildColForOneColGrid(num)
+	.gg-col-{num}
+		width getPercentLength(calcColumnLength(12))
+	setMarginTopForSiblingCols(10)
+
 getPercentLength()
 	arguments/GG_BASE_WIDTH_CONTAINER * 100%
 
 calcColumnLength()
 	GG_BASE_WIDTH_COL*arguments + GG_BASE_WIDTH_GUTTER*(arguments - 1)
-
-
-// One Col Grid Builder
 	
-buildColsForOneColGrid()
-	for num in (1..GG_TOTAL_COLS)
-		setColWidthForOneColGrid(num)
-	setMarginTopForSiblingCols(10)
-
-setColWidthForOneColGrid()
-	.gg-col-{arguments}
-		width getPercentLength(calcColumnLength(12))
-
 setMarginTopForSiblingCols()
 	[class*="gg-col"] + [class*="gg-col"]
 		margin-top arguments * 1px;
@@ -50,7 +49,7 @@ createHorizontalOffsets()
 		.gg-hoff-{num}
 			if(arguments == 12)
 				margin-left getPercentLength(calcColumnLength(num) + GG_BASE_WIDTH_GUTTER * 2)
-			else if(arguments == 1)
+			else
 				margin-left getPercentLength(GG_BASE_WIDTH_GUTTER)
 
 buildGutter()
