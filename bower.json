@@ -7,9 +7,10 @@
         "src",
         ".git",
         ".gitignore",
+        "welcome",
         "bower.json",
         "Gruntfile.js",
-        "/index.html",
+        "index.html",
         "package.json",
         "README.md"
     ]
