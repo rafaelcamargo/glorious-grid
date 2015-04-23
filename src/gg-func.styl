@@ -17,7 +17,8 @@ buildColForTwelveColsGrid(num)
 buildColForOneColGrid(num)
 	.gg-col-{num}
 		width getPercentLength(calcColumnLength(12))
-	setMarginTopForSiblingCols(10)
+	if(num == 12)
+		setMarginTopForSiblingCols(10)
 
 getPercentLength()
 	arguments/GG_BASE_WIDTH_CONTAINER * 100%
