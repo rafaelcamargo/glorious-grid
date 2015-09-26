@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         },
         files: {
           'dist/ggrid.min.css': 'src/*styl',
-          'welcome/assets/css/main.css': 'welcome/assets/styl/*.styl'
+          'welcome/assets/css/doc.css': 'welcome/assets/styl/*.styl'
         }
       }
     },
