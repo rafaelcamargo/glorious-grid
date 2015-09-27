@@ -1,41 +1,116 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Glorious Grid: Welcome Page</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="HandheldFriendly" content="true">
-		<link rel="stylesheet" type="text/css" href="../dist/ggrid.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/doc.css">
-	</head>
-	<body>
+  <head>
+    <title>Glorious Grid: Welcome Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" type="text/css" href="../dist/ggrid.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/doc.css">
+  </head>
+  <body>
+    <div class="gg-container">
 
-		<div class="gg-container">
-			<div class="gg-row gg-voff-1">
-				<div class="gg-col-12">
-					<h1>Glorious Grid</h1>
-				</div>
-			</div>
-			<div class="gg-row gg-voff-1">
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-				<div class="gg-col-1"></div>
-			</div>
-			<div class="gg-row gg-voff-1">
-				<div class="gg-col-11 gg-hoff-1"></div>
-			</div>
-			<div class="gg-row gg-voff-1">
-				<div class="gg-col-6 gg-hoff-6"></div>
-			</div>
-		</div>
+      <div class="gg-row gg-voff-4">
+        <div class="gg-col-12">
+          <h1>Glorious Grid</h1>
+        </div>
+      </div>
 
-	</body>
+      <div class="gg-row gg-voff-2">
+        <div class="gg-col-6">
+          <p>
+            This is a worryless-responsive grid for developers
+            who don't want to have to choose several columns 
+            sizes depending on size of screen. So, Glorius 
+            Grid has no those famous classes used by bootstrap 
+            and foundation like <code>small</code> or 
+            <code>col-sm</code>, <code>medium</code> or 
+            <code>col-md</code> and  <code>large</code> or 
+            <code>col-lg</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="gg-row gg-voff-6">
+        <div class="gg-col-12">
+          <h2>Usage</h2>
+        </div>
+      </div>
+
+      <div class="gg-row gg-voff-2">
+        <div class="gg-col-6">
+          <p>
+            When using Glorius Grid, columns can be defined in 
+            just three ways. Let the grid becomes single column 
+            for screens with a lower width than your grid container 
+            <code>gg-container</code>, keep the same # of 
+            columns for medium screen size or keep the same # 
+            of columns for all screen sizes.
+          </p>
+        </div>
+
+        <div class="gg-col-6">
+          <p>
+            You you want to let grid becomes single columns, 
+            you don't need to do anything. It's the default 
+            behaviour of Glorious Grid.<br />
+            Otherwise, you can use the following classes in 
+            a specific row <code>gg-row</code>:<br />
+            <code>gg-keep-on-md</code> on respective 
+            <code>gg-keep-on-sm</code> containing these columns.
+          </p>
+        </div>
+      </div>
+
+      <div class="gg-row gg-voff-6">
+        <div class="gg-col-12">
+          <h3>Single Column Grid</h3>
+        </div>
+      </div>
+
+      <div class="gg-row gg-voff-2">
+        <div class="gg-col-12">
+          <p>
+            The default behaviour is the grid to become single 
+            grid when the screen width is smaller than 
+            <code>gg-container</code> width.<br/>
+            If you're reading this documentation on a desktop 
+            device, resize the window to check this behaviour 
+            on the columns below:
+          </p>
+        </div>
+      </div>
+
+      <div class="gg-doc-col-visible">
+        <div class="gg-row gg-voff-2">
+          <div class="gg-col-12">
+            <code>gg-col-12</code>
+          </div>
+        </div>
+        <div class="gg-row gg-voff-1">
+          <div class="gg-col-8">
+            <code>gg-col-8</code>
+          </div>
+          <div class="gg-col-4">
+            <code>gg-col-4</code>
+          </div>
+        </div>
+        <div class="gg-row gg-voff-1">
+          <div class="gg-col-3">
+            <code>gg-col-3</code>
+          </div>
+          <div class="gg-col-3">
+            <code>gg-col-3</code>
+          </div>
+          <div class="gg-col-3">
+            <code>gg-col-3</code>
+          </div>
+          <div class="gg-col-3">
+            <code>gg-col-3</code>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
 </html>
