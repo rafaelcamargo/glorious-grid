@@ -7,5 +7,4 @@ A worryless-responsive grid.
 ```npm install --save ggrid```
 
 ### Documentation
-You'll can check the documentation soon at:
-http://rafaelcamargo.github.io/glorious-grid/welcome/
+Still in progress
