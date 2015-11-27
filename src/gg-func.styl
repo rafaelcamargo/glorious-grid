@@ -4,9 +4,7 @@
 
 buildCols()
   for num in (1..$total-cols)
-    if(arguments == 12)
       buildColForTwelveColsGrid(num)
-    else
       buildColForOneColGrid(num)
   setMarginTopForSiblingCols(10)
 
@@ -18,29 +16,27 @@ buildColForOneColGrid(num)
   buildColForOneColGridOnMobile(num)
   buildColForOneColGridOnTablet(num)
 
+buildColForOneColGridOnMobile(num)
+  +breakpoint('xs-sm')
+    .gg-col-{num}
+      width getPercentLength(calcColumnLength(12))
+    &.gg-kom
+      > .gg-col-{num}
+        width getPercentLength(calcColumnLength(num))
+      
+buildColForOneColGridOnTablet(num)
+  +breakpoint('sm')
+    .gg-col-{num}
+      width getPercentLength(calcColumnLength(12))
+    &.gg-kot
+      > .gg-col-{num}
+        width getPercentLength(calcColumnLength(num))
+
 getPercentLength()
   arguments/$base-width-container * 100%
 
 calcColumnLength()
   $base-width-col*arguments + $base-width-gutter*(arguments - 1)
-
-buildColForOneColGridOnMobile(num)
-  +breakpoint('xs-sm')
-    .gg-row
-      .gg-col-{num}
-        width getPercentLength(calcColumnLength(12))
-      &.gg-kom
-        > .gg-col-{num}
-          width getPercentLength(calcColumnLength(num))
-      
-buildColForOneColGridOnTablet(num)
-  +breakpoint('sm')
-    .gg-row
-      .gg-col-{num}
-        width getPercentLength(calcColumnLength(12))
-      &.gg-kot
-        > .gg-col-{num}
-          width getPercentLength(calcColumnLength(num))
 
 setMarginTopForSiblingCols()
   +breakpoint('xs-sm')
