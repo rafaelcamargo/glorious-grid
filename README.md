@@ -1,4 +1,4 @@
-Glorious Grid v0.2.0
+Glorious Grid v0.3.0
 ============
 
 A worryless-responsive grid.
