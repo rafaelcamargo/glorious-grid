@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     stylus: {
-      compile: {
+      src: {
         options: {
           banner: '/*\n' +
                   '* <%= pkg.name %> v<%= pkg.version %> ' +
@@ -16,14 +16,25 @@ module.exports = function(grunt) {
         },
         files: {
           'dist/ggrid.min.css': 'src/*styl',
+        }
+      },
+      doc: {
+        options: {
+          compress: true
+        },
+        files: {
           'welcome/assets/css/doc.css': 'welcome/assets/styl/*.styl'
         }
       }
     },
     watch: {
-      css: {
-        files: ['src/*styl', 'welcome/assets/styl/*.styl'],
-        tasks: ['stylus']
+      src: {
+        files: ['src/*styl'],
+        tasks: ['stylus:src']
+      },
+      doc: {
+        files: ['welcome/assets/styl/*.styl'],
+        tasks: ['stylus:doc']
       }
     }
   });
@@ -32,4 +43,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['stylus']);
+
 };
