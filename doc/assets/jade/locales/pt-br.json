@@ -1,0 +1,38 @@
+{
+  "project": {
+    "title": "glorious grid",
+    "slogan": "responsividade limpa"
+  },
+  "menu": {
+    "intro": "introdução",
+    "install": "instalar",
+    "usage": "usar",
+    "contribute": "contribuir"
+  },
+  "menu_lang": {
+    "en": "en",
+    "pt": "pt"
+  },
+  "button": {
+    "download": "download (7kb)"
+  },
+  "section": {
+    "intro": {
+      "text": "Esse grid foi feito para front enders que curtem simplicidade e que não curtem a maneira com a qual Bootstrap e Foundation tratam seus grids. Diferentemente deles, esse grid não requer várias classes css de acordo com o tamanho da tela, mantendo a marcação limpa."
+    },
+    "install": {
+      "text": "Você pode instalá-lo usando npm ou pode, se não manjar de gerenciamento de dependências, fazer o download do código e inserí-lo manualmente:"
+    },
+    "usage": {
+      "topics": {
+        "container": {
+          "title": "container",
+          "text": "O container padrão nesse grid limita sua largura ao máximo de 960 pixels."
+        },
+        "columns": "colunas",
+        "offsets": "offsets",
+        "responsiveness": "responsividade"
+      }
+    }
+  }
+}

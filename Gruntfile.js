@@ -23,25 +23,66 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          'welcome/assets/css/doc.css': 'welcome/assets/styl/*.styl'
+          'doc/assets/css/doc.css': 'doc/assets/styl/*.styl'
         }
+      }
+    },
+    concat: {
+      dist: {
+        files: {
+          'doc/assets/dist.js': 'doc/assets/js/**/*.js'
+        }
+      }
+    },
+    jade: {
+      html: {
+        files: {
+          'doc/index.html': 'doc/assets/jade/index.jade'
+        },
+        options: {
+          i18n: {
+            locales: 'doc/assets/jade/locales/*.json',
+            namespace: '$i18n'
+          },
+          client: false,
+          pretty: true
+        }
+      }
+    },
+    'http-server': {
+      'dev': {
+        port: 9000,
+        host: "0.0.0.0",
+        runInBackground: true
       }
     },
     watch: {
       src: {
-        files: ['src/*styl'],
+        files: ['src/**/*.styl'],
         tasks: ['stylus:src']
       },
       doc: {
-        files: ['welcome/assets/styl/*.styl'],
+        files: ['doc/assets/styl/**/*.styl'],
         tasks: ['stylus:doc']
+      },
+      script: {
+        files: ['doc/assets/js/**/*.js'],
+        tasks: ['concat']        
+      },
+      jade: {
+        files: ['doc/**/*.jade','doc/assets/jade/locales/*.json'],
+        tasks: ['jade']
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-jade-i18n');
+  grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['stylus']);
+  grunt.registerTask('build', ['stylus', 'concat', 'jade']);
+  grunt.registerTask('start', ['stylus', 'http-server', 'watch']);
 
 };

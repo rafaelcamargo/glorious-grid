@@ -1,0 +1,38 @@
+{
+  "project": {
+    "title": "glorious grid",
+    "slogan": "clean responsiveness"
+  },
+  "menu": {
+    "intro": "introduction",
+    "install": "install",
+    "usage": "usage",
+    "contribute": "contribute"
+  },
+  "menu_lang": {
+    "en": "en",
+    "pt": "pt"
+  },
+  "button": {
+    "download": "download (7kb)"
+  },
+  "section": {
+    "intro": {
+      "text": "This grid was made for front enders who like simplicity and doesn't like the way that Bootstrap and Foundation handle grid systems. Differently from Bootstrap and Foundation, this grid system avoid multiple screen classes strategy that usually lead the front end into a messed markup."
+    },
+    "install": {
+      "text": "You can install it using npm or, if you're not confortable with package management, download the code and put it manually in your html:"
+    },
+    "usage": {
+      "topics": {
+        "container": {
+          "title": "container",
+          "text": "The default container used in this grid set its maximum width to 960 pixels."
+        },
+        "columns": "columns",
+        "offsets": "offsets",
+        "responsiveness": "responsiveness"
+      }
+    }
+  }
+}

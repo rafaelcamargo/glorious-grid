@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Going to the Welcome Page...</title>
-	<script type="text/javascript">
-		if(location.hostname.indexOf('github') != -1)
-			window.location.pathname = '/glorious-grid/welcome/';
-	</script>
-</head>
-<body>
-	<h1>Warning</h1>
-	<p>
-		This page is just a redirection for Github Pages and works only online.
-		<br/>
-		To access the documentation of this project, open welcome/index.html.
-	</p>
-</body>
+  <head>
+  <title>Going to the Documentation Page...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+      var home = 'doc/en-us';
+      var url = location.hostname.indexOf('github') != -1 ? '/glorious-grid/' + home : home;
+      window.location.pathname = url;
+    </script>
+  </head>
+  <body>
+    <h1>Warning</h1>
+    <p>Going to the Documentation Page...</p>
+  </body>
 </html>

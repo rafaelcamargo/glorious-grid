@@ -1,7 +1,7 @@
 Glorious Grid v0.3.0
 ============
 
-A worryless-responsive grid.
+The clean responsive grid.
 
 ### Installation
 ```npm install --save ggrid```

@@ -1,13 +1,23 @@
 @require 'var'
 @require 'func'
 
-body, h1, h2, h3, h4, h5, h6, p
+body
+  background-color $color-primary
+  font-size 16px
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, pre
+  margin 0
+  padding 0
   color $color-grey-dark
   font-family $font-family
+  font-weight 300
   
 p
-  font-size 0.875em
+  font-size 1em
   line-height 1.5
+  
+h1, h2, h3, h4, h5, h6
+  font-weight 300
   
 h1
   font-size 2.25em
@@ -28,8 +38,8 @@ h6
   font-size 0.75em
   
 code
-  padding 0 5px
+  display block
+  padding 13px
   background-color $color-grey-light
-  font-family $font-family-secondary
-  border 1px solid $color-grey
-  roundBorder(3px)
+  font-size 0.75em
+  text-align left
