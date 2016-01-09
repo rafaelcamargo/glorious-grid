@@ -3,11 +3,8 @@ html
   include _head.jade
   body
     include _menu-lang.jade
-    section.cp-section-cover.is-text-center
-      .gg-container
-        h1.cp-logo.icon-grid-circle #{$i18n.project.title}
-        h2 #{$i18n.project.slogan}
-      include _menu.jade
+    
+    include _cover.jade
 
     include _intro.jade
 

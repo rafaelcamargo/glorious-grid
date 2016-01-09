@@ -44,8 +44,8 @@ module.exports = function(grunt) {
             locales: 'doc/assets/jade/locales/*.json',
             namespace: '$i18n'
           },
-          client: false,
-          pretty: true
+          client: false
+          //pretty: true
         }
       }
     },
