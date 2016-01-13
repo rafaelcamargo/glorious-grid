@@ -1,6 +1,6 @@
 (function(){
 
-  'use strict'
+  'use strict';
 
   function init(){
     var codeBlocks = document.querySelectorAll('code');

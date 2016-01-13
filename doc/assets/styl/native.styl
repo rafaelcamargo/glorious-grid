@@ -6,6 +6,7 @@ body
   font-size 16px
 
 body, h1, h2, h3, h4, h5, h6, p, ul, li, pre
+  position relative
   margin 0
   padding 0
   color $color-grey-dark
@@ -20,22 +21,28 @@ h1, h2, h3, h4, h5, h6
   font-weight 300
   
 h1
-  font-size 2.25em
+  font-size 4.5em
 
 h2
-  font-size 1.5em
+  font-size 2.25em
   
 h3
-  font-size 1.125em
+  font-size 1.5em
   
 h4
-  font-size 1em
+  font-size 1.125em
   
 h5
-  font-size 0.875em
+  font-size 1em
   
 h6
-  font-size 0.75em
+  font-size 0.875em
+  
+a, a:visited, a:focus, a:hover, a:active
+  padding 2px 0
+  color $color-primary
+  text-decoration none
+  border-bottom 1px solid $color-primary
   
 code
   display block

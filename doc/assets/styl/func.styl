@@ -1,11 +1,42 @@
+@require 'var'
+
 border-radius()
   border-radius arguments
   -webkit-border-radius arguments
   -moz-border-radius arguments
-  
+
+transition(property, time)
+  -webkit-transition property time cubic-bezier(0.080, 0.690, 0.485, 0.990)
+  -moz-transition property time cubic-bezier(0.080, 0.690, 0.485, 0.990)
+  -o-transition property time cubic-bezier(0.080, 0.690, 0.485, 0.990)
+  transition property time cubic-bezier(0.080, 0.690, 0.485, 0.990)
+
 clearfix()
   zoom 1
   &:after
     content " "
     display table
     clear both
+
+breakpoint(size)
+  if(size == 'xs')
+    @media screen and (max-width $screen-xs-max)
+      {block}
+  else if (size == 'xs-sm')
+    @media screen and (max-width $screen-sm-max)
+      {block}
+  else if (size == 'sm')
+    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+      {block}
+  else if (size == 'sm-md')
+    @media screen and (min-width $screen-sm-min) and (max-width $screen-md-max)
+      {block}
+  else if (size == 'md')
+    @media screen and (min-width $screen-sm-max) and (max-width $screen-md-max)
+      {block}
+  else if (size == 'md-lg')
+    @media screen and (min-width $screen-md-max) and (max-width $screen-lg-min)
+      {block}
+  else if (size == 'lg')
+    @media screen and (min-width $screen-lg-min)
+      {block}

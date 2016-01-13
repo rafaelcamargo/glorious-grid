@@ -1,6 +1,6 @@
 (function(){
 
-  'use strict'
+  'use strict';
 
   var langSelectors = document.querySelectorAll('.cp-menu-lang li');
   var path = window.location.pathname;

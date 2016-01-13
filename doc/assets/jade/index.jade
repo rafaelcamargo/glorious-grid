@@ -1,15 +1,18 @@
 doctype html
 html
-  include _head.jade
+  include _component-head.jade
+  include _mixins.jade
   body
-    include _menu-lang.jade
+    include _component-menu-lang.jade
     
-    include _cover.jade
+    include _section-cover.jade
 
-    include _intro.jade
+    include _section-intro.jade
 
-    include _install.jade
+    include _section-install.jade
 
-    include _usage.jade
+    include _section-usage.jade
+
+    include _section-contribute.jade
 
     script(type="text/javascript", src="../assets/dist.js")

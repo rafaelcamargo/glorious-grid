@@ -1,7 +1,7 @@
 {
   "project": {
     "title": "glorious grid",
-    "slogan": "responsividade limpa"
+    "slogan": "simples. leve. limpo."
   },
   "menu": {
     "intro": "introdução",
@@ -14,14 +14,14 @@
     "pt": "pt"
   },
   "button": {
-    "download": "download (7kb)"
+    "download": "baixar (7kb)"
   },
   "section": {
     "intro": {
       "text": "Esse grid foi feito para front enders que curtem simplicidade e que não curtem a maneira com a qual Bootstrap e Foundation tratam seus grids. Diferentemente deles, esse grid não requer várias classes css de acordo com o tamanho da tela, mantendo a marcação limpa."
     },
     "install": {
-      "text": "Você pode instalá-lo usando npm ou pode, se não manjar de gerenciamento de dependências, fazer o download do código e inserí-lo manualmente:"
+      "text": "Você pode instalá-lo usando npm ou pode, se não manjar de gerenciamento de dependências, baixar o código e inserí-lo manualmente:"
     },
     "usage": {
       "topics": {
@@ -29,10 +29,34 @@
           "title": "container",
           "text": "O container padrão nesse grid limita sua largura ao máximo de 960 pixels."
         },
-        "columns": "colunas",
-        "offsets": "offsets",
-        "responsiveness": "responsividade"
+        "rows": {
+          "title": "linhas",
+          "text": "Toda coluna deve ser filha direta de uma linha."
+        },
+        "columns": {
+          "title": "colunas",
+          "text": "Esse grid oferece o máximo de 12 colunas por linha."
+        },
+        "horizontal_offset": {
+          "title": "offset horizontal",
+          "text": "Esse grid é capaz de deslocar horizontalmente uma coluna em até 11 vezes o valor da sua largura."
+        },
+        "vertical_offset": {
+          "title": "offset vertical",
+          "text": "O grid oferece também um offset vertical. É possível descolar uma linha de 10 a 120 pixels."
+        },
+        "responsiveness": {
+          "title": "responsividade",
+          "text": "Esse grid foi projetado para ser responsivo mantendo a marcação o mais simples e limpa possível. Assim, por padrão, o grid transforma-se em um grid de apenas 1 coluna em telas menores que 960 pixels, mas é possível mantê-lo com múltiplas colunas tanto em tablets, smartphones, ou ambos."
+        },
+        "nesting": {
+          "title": "nesting",
+          "text": "This grid allows nesting. It is completely possible split a column in more columns."
+        }
       }
+    },
+    "contribute": {
+      "text": "Para contribuir com esse projeto, fique à vontade para forká-lo no "
     }
   }
 }

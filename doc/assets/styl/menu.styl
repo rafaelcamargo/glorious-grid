@@ -5,10 +5,21 @@
   position absolute
   bottom 0
   width 100%
+  background-color transparent
+  transition(all, 500ms)
+  &.is-fixed
+    position fixed
+    top 0
+    left 0
+    bottom auto
+    background-color alpha($color-primary, 0.9)
+    z-index 10
+    .cp-menu
+      [class^="icon-"]:before, [class*=" icon-"]:before  
+        opacity 0
 
 .cp-menu
   margin 0 auto
-  padding 15px 0
   width 100%
   max-width 450px
   list-style-type none
@@ -19,11 +30,33 @@
     width 25%
     text-align center
     text-transform capitalize
+    &.is-disabled
+      a, a:visited, a:focus, a:hover, a:active
+        opacity 0.5
+    &.is-selected
+      a, a:visited, a:focus, a:hover, a:active
+        &:before
+          opacity 1
   a, a:visited, a:focus, a:hover, a:active
+    position relative
+    top 0
     display block
     padding 25px 0
     color $color-white
     text-decoration none
+    transition(all, 500ms)
+    &:before
+      position absolute
+      bottom 10px
+      left 50%
+      margin-left -3px
+      content ' '
+      width 6px
+      height 6px
+      background-color $color-white
+      opacity 0
+      border-radius(3px)
+      transition(all, 500ms)
   [class^="icon-"]:before, [class*=" icon-"]:before
     position absolute
     top 0
@@ -33,3 +66,6 @@
     height 24px
     color $color-white
     font-size 16px
+    z-index -1
+    opacity 1
+    transition(all, 500ms)

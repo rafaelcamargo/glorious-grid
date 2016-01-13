@@ -1,7 +1,7 @@
 {
   "project": {
     "title": "glorious grid",
-    "slogan": "clean responsiveness"
+    "slogan": "simple. light. clean."
   },
   "menu": {
     "intro": "introduction",
@@ -29,10 +29,34 @@
           "title": "container",
           "text": "The default container used in this grid set its maximum width to 960 pixels."
         },
-        "columns": "columns",
-        "offsets": "offsets",
-        "responsiveness": "responsiveness"
+        "rows": {
+          "title": "rows",
+          "text": "Every column should be a direct child of a row."
+        },
+        "columns": {
+          "title": "columns",
+          "text": "This grid offers the maximum of 12 columns per row."
+        },
+        "horizontal_offset": {
+          "title": "horizontal offset",
+          "text": "This grid is capable to horizontally offset a column up to 11 times its width."
+        },
+        "vertical_offset": {
+          "title": "vertical offset",
+          "text": "The grid also offers a vertical offset. It can offset a row from 10 to 120 pixels."
+        },
+        "responsiveness": {
+          "title": "responsiveness",
+          "text": "This grid was designed to allow responsiveness keeping markup as simple and clean as possible. So, its default behavior is to make the grid single column when the screen width is lower then 960 pixels, but it can stay multi-column either on tablets, smartphones or both."
+        },
+        "nesting": {
+          "title": "nesting",
+          "text": "This grid allows nesting. It is completely possible split a column in more columns."
+        }
       }
+    },
+    "contribute": {
+      "text": "To contribute on this project, feel free to fork it on "
     }
   }
 }
