@@ -2,7 +2,7 @@
 @require 'func'
 
 .doc-sample
-  < .gg-row
+  > .gg-row
     margin-left 0
     margin-right 0
   [class*="gg-col"]
@@ -10,6 +10,9 @@
     color $color-primary
     text-align center
     line-height 40px
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
     border-top 1px solid $color-white
   [class*="gg-col"] + [class*="gg-col"]
     border-left 1px solid $color-white

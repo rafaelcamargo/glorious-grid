@@ -47,7 +47,7 @@
         },
         "responsiveness": {
           "title": "responsiveness",
-          "text": "This grid was designed to allow responsiveness keeping markup as simple and clean as possible. So, its default behavior is to make the grid single column when the screen width is lower then 960 pixels, but it can stay multi-column either on tablets, smartphones or both."
+          "text": "This grid was designed to allow responsiveness keeping markup as simple and clean as possible. So, its default behavior is to make the grid single column when the screen width is lower than 960 pixels, but it can stay multi-column either on tablets, smartphones or both."
         },
         "nesting": {
           "title": "nesting",
