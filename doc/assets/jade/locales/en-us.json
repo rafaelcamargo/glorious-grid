@@ -25,17 +25,17 @@
     },
     "usage": {
       "topics": {
-        "container": {
-          "title": "container",
-          "text": "The default container used in this grid set its maximum width to 960 pixels."
+        "box": {
+          "title": "box",
+          "text": "This is the default container for the grid. It sets the maximum width of the grid to 960 pixels."
         },
-        "rows": {
-          "title": "rows",
+        "row": {
+          "title": "row",
           "text": "Every column should be a direct child of a row."
         },
-        "columns": {
-          "title": "columns",
-          "text": "This grid offers the maximum of 12 columns per row."
+        "column": {
+          "title": "column",
+          "text": "It is possible split a row up to 12 columns."
         },
         "horizontal_offset": {
           "title": "horizontal offset",

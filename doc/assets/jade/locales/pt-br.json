@@ -25,25 +25,25 @@
     },
     "usage": {
       "topics": {
-        "container": {
-          "title": "container",
-          "text": "O container padrão nesse grid limita sua largura ao máximo de 960 pixels."
+        "box": {
+          "title": "caixa",
+          "text": "Esse é o container padrão desse grid. Ele limita a largura do grid ao máximo de 960 pixels."
         },
-        "rows": {
-          "title": "linhas",
+        "row": {
+          "title": "linha",
           "text": "Toda coluna deve ser filha direta de uma linha."
         },
-        "columns": {
-          "title": "colunas",
-          "text": "Esse grid oferece o máximo de 12 colunas por linha."
+        "column": {
+          "title": "coluna",
+          "text": "É possível dividir uma linha em até 12 colunas."
         },
         "horizontal_offset": {
-          "title": "offset horizontal",
-          "text": "Esse grid é capaz de deslocar horizontalmente uma coluna em até 11 vezes o valor da sua largura."
+          "title": "deslocamento horizontal",
+          "text": "É possível deslocar horizontalmente uma coluna em até 11 vezes o valor da sua largura."
         },
         "vertical_offset": {
-          "title": "offset vertical",
-          "text": "O grid oferece também um offset vertical. É possível descolar uma linha de 10 a 120 pixels."
+          "title": "deslocamento vertical",
+          "text": "O grid oferece também o deslocamento vertical. É possível descolar verticalmente uma linha de 10 a 120 pixels."
         },
         "responsiveness": {
           "title": "responsividade",

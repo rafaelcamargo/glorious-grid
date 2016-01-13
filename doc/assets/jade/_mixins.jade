@@ -1,18 +1,19 @@
 mixin section-usage-topic(title, text, css)
-  .gg-row.gg-voff-5
+  .gg-row.gg-vof-5
     .gg-col-12
       h3 #{title}
-        span.cp-class-name-box #{css}
-  .gg-row.gg-voff-3
+        if css
+          span.cp-class-name-box #{css}
+  .gg-row.gg-vof-3
     .gg-col-12
       p #{text}
 
 mixin section-usage-topic-content()
-  .gg-row.gg-voff-3
+  .gg-row.gg-vof-3
     .gg-col-12
       block
 
 mixin section-usage-topic-sample()
   +section-usage-topic-content()
-    .l-doc-col-visible
+    .doc-sample
       block

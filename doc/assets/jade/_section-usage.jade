@@ -1,11 +1,17 @@
 section(data-js="section-usage")
-  .gg-container
+  .gg-box
     .gg-row.is-text-center
       .gg-col-12
         h2 #{$i18n.menu.usage}
     
-    include _section-usage-container.jade
+    include _section-usage-box.jade
 
-    include _section-usage-rows.jade
+    include _section-usage-row.jade
 
-    include _section-usage-horizontal-offset.jade
+    include _section-usage-col.jade
+
+    include _section-usage-hof.jade
+
+    include _section-usage-vof.jade
+
+    include _section-usage-nesting.jade
