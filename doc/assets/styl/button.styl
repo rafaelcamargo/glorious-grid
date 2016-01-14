@@ -1,0 +1,22 @@
+@require 'var'
+@require 'func'
+
+.cp-btn
+  display inline-block
+  color $color-primary
+  text-align center
+  text-transform capitalize
+  text-decoration none
+  text-overflow ellipsis
+  border 1px solid $color-primary
+  white-space nowrap
+  overflow hidden
+  border-radius(3px)
+  &.cp-btn-block
+    display block
+  &,
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited
+    padding 10px

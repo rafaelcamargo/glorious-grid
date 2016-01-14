@@ -1,0 +1,27 @@
+@require 'var'
+@require 'func'
+
+.cp-class-name-box
+  position relative
+  top -4px
+  margin 0 0 0 10px
+  padding 6px 6px 6px 42px
+  font-size 0.75em
+  text-transform none
+  border 1px solid $color-grey
+  box-sizing border-box
+  border-radius(3px)
+  &:before
+    position absolute
+    top 0
+    left 0
+    padding 6px
+    content 'css'
+    color $color-grey
+    text-transform uppercase
+    border-right 1px solid $color-grey
+
++breakpoint('xs')
+  .cp-class-name-box
+    float left
+    margin 10px 0 0 0

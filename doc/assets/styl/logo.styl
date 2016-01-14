@@ -1,0 +1,17 @@
+@require 'func'
+
+.cp-logo
+  position relative
+  font-size 4.5em
+  letter-spacing -3px
+  &:before
+    position absolute
+    top -40px
+    left 50%
+    margin-left -20px
+    font-size 40px
+
++breakpoint('xs')
+  .cp-logo
+    font-size 2.25em
+    letter-spacing -1px

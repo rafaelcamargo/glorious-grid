@@ -1,0 +1,66 @@
+{
+  "project": {
+    "title": "Glorious Grid",
+    "slogan": "Simples. Leve. Limpo."
+  },
+  "menu": {
+    "intro": "introdução",
+    "install": "instalar",
+    "usage": "usar",
+    "contribute": "contribuir"
+  },
+  "menu_lang": {
+    "en": "en",
+    "pt": "pt"
+  },
+  "button": {
+    "download": "baixar (6,4kb)"
+  },
+  "section": {
+    "intro": {
+      "text": "Esse grid foi feito para front enders que curtem simplicidade e que não curtem a maneira com a qual Bootstrap e Foundation tratam seus grids. Diferentemente deles, esse grid não requer várias classes css de acordo com o tamanho da tela, mantendo a marcação limpa."
+    },
+    "install": {
+      "text": "Você pode instalá-lo usando npm ou pode, se não manjar de gerenciamento de dependências, baixar o código e inserí-lo manualmente:"
+    },
+    "usage": {
+      "topics": {
+        "box": {
+          "title": "caixa",
+          "text": "Esse é o container padrão desse grid. Ele limita a largura do grid ao máximo de 960 pixels."
+        },
+        "row": {
+          "title": "linha",
+          "text": "Toda coluna deve ser filha direta de uma linha."
+        },
+        "column": {
+          "title": "coluna",
+          "text": "É possível dividir uma linha em até 12 colunas."
+        },
+        "horizontal_offset": {
+          "title": "deslocamento horizontal",
+          "text": "É possível deslocar horizontalmente uma coluna em até 11 vezes o valor da sua largura."
+        },
+        "vertical_offset": {
+          "title": "deslocamento vertical",
+          "text": "O grid oferece também o deslocamento vertical. É possível descolar verticalmente uma linha de 10 a 120 pixels."
+        },
+        "responsiveness": {
+          "title": "responsividade",
+          "text": "Esse grid foi projetado para ser responsivo mantendo a marcação o mais simples e limpa possível. Assim, por padrão, o grid transforma-se em um grid de apenas 1 coluna em telas menores que 960 pixels, mas é possível mantê-lo com múltiplas colunas tanto em tablets, smartphones, ou ambos.",
+          "notes": {
+            "mobile": "A classe gg-kom usada nas linhas do grid acima o mantém com múltiplas colunas em smartphones e tablets.",
+            "tablet": "A classe gg-kot usada nas linhas do grid acima o mantém com múltiplas colunas em tablets, mas o torna grid de 1 coluna em smartphones."
+          }
+        },
+        "nesting": {
+          "title": "aninhamento",
+          "text": "Esse grid permite aninhamento. É completamente possível dividir uma coluna em mais colunas."
+        }
+      }
+    },
+    "contribute": {
+      "text": "Para contribuir com esse projeto, fique à vontade para forká-lo no "
+    }
+  }
+}

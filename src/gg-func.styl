@@ -6,11 +6,11 @@ buildCols()
   for num in (1..$total-cols)
       buildColForTwelveColsGrid(num)
       buildColForOneColGrid(num)
-  setMarginTopForSiblingCols(10)
+  setMarginTopForSiblingCols($base-sibling-col-offset)
 
 buildColForTwelveColsGrid(num)
   .gg-col-{num}
-    width getPercentLength(calcColumnLength(num))
+    width getPercent(num)
 
 buildColForOneColGrid(num)
   buildColForOneColGridOnMobile(num)
@@ -19,24 +19,21 @@ buildColForOneColGrid(num)
 buildColForOneColGridOnMobile(num)
   +breakpoint('xs-sm')
     .gg-col-{num}
-      width getPercentLength(calcColumnLength(12))
+      width getPercent($total-cols)
     &.gg-kom
       > .gg-col-{num}
-        width getPercentLength(calcColumnLength(num))
+        width getPercent(num)
       
 buildColForOneColGridOnTablet(num)
   +breakpoint('sm')
     .gg-col-{num}
-      width getPercentLength(calcColumnLength(12))
+      width getPercent($total-cols)
     &.gg-kot
       > .gg-col-{num}
-        width getPercentLength(calcColumnLength(num))
+        width getPercent(num)
 
-getPercentLength()
-  arguments/$base-width-container * 100%
-
-calcColumnLength()
-  $base-width-col*arguments + $base-width-gutter*(arguments - 1)
+getPercent()
+  arguments/$total-cols * 100%
 
 setMarginTopForSiblingCols()
   +breakpoint('xs-sm')
@@ -49,6 +46,9 @@ setMarginTopForSiblingCols()
     .gg-kot
       > [class*="gg-col"] + [class*="gg-col"]
         margin-top 0
+        
+buildRowMargin()
+  $base-width-gutter/2 * -1px
 
 // Helpers
 
@@ -60,28 +60,24 @@ clearfix()
     clear both
 
 createVerticalOffsets()
-  for num in (1..10)
-    .gg-voff-{num}
+  for num in (1..12)
+    .gg-vof-{num}
       margin-top num * 10px
       
 createHorizontalOffsets()
   for num in (1..$total-cols - 1)
-    .gg-hoff-{num}
-        margin-left getPercentLength(calcColumnLength(num) + $base-width-gutter * 2)
+    .gg-hof-{num}
+        margin-left getPercent(num)
     +breakpoint('xs-sm')
-      .gg-hoff-{num}
-        margin-left getPercentLength($base-width-gutter)
+      .gg-hof-{num}
+        margin-left 0
       .gg-kom
-        .gg-hoff-{num}
-            margin-left getPercentLength(calcColumnLength(num) + $base-width-gutter * 2)
+        .gg-hof-{num}
+            margin-left getPercent(num)
     +breakpoint('sm')
       .gg-kot
-        .gg-hoff-{num}
-            margin-left getPercentLength(calcColumnLength(num) + $base-width-gutter * 2)
-
-buildGutter()
-  gutter = $base-width-gutter/$base-width-container * 100%
-  gutter * arguments
+        .gg-hof-{num}
+            margin-left getPercent(num)
 
 // Breakpoints
 
@@ -100,10 +96,4 @@ breakpoint(size)
       {block}
   else if (size == 'md')
     @media screen and (min-width $screen-sm-max) and (max-width $screen-md-max)
-      {block}
-  else if (size == 'md-lg')
-    @media screen and (min-width $screen-md-max) and (max-width $screen-lg-min)
-      {block}
-  else if (size == 'lg')
-    @media screen and (min-width $screen-lg-min)
       {block}

@@ -1,0 +1,66 @@
+{
+  "project": {
+    "title": "Glorious Grid",
+    "slogan": "Simple. Light. Clean."
+  },
+  "menu": {
+    "intro": "introduction",
+    "install": "install",
+    "usage": "usage",
+    "contribute": "contribute"
+  },
+  "menu_lang": {
+    "en": "en",
+    "pt": "pt"
+  },
+  "button": {
+    "download": "download (6.4kb)"
+  },
+  "section": {
+    "intro": {
+      "text": "This grid was made for front enders who like simplicity and doesn't like the way that Bootstrap and Foundation handle grid systems. Differently from Bootstrap and Foundation, this grid system avoid multiple screen classes strategy that usually lead the front end into a messed markup."
+    },
+    "install": {
+      "text": "You can install it using npm or, if you're not confortable with package management, download the code and put it manually in your html:"
+    },
+    "usage": {
+      "topics": {
+        "box": {
+          "title": "box",
+          "text": "This is the default container for the grid. It sets the maximum width of the grid to 960 pixels."
+        },
+        "row": {
+          "title": "row",
+          "text": "Every column should be a direct child of a row."
+        },
+        "column": {
+          "title": "column",
+          "text": "It is possible split a row up to 12 columns."
+        },
+        "horizontal_offset": {
+          "title": "horizontal offset",
+          "text": "This grid is capable to horizontally offset a column up to 11 times its width."
+        },
+        "vertical_offset": {
+          "title": "vertical offset",
+          "text": "The grid also offers a vertical offset. It can offset a row from 10 to 120 pixels."
+        },
+        "responsiveness": {
+          "title": "responsiveness",
+          "text": "This grid was designed to allow responsiveness keeping markup as simple and clean as possible. So, its default behavior is to make the grid single column when the screen width is lower than 960 pixels, but it can stay multi-column either on tablets, smartphones or both.",
+          "notes": {
+            "mobile": "The class gg-kom used on the rows of the grid above keeps it multi-colum on smartphones and tablets",
+            "tablet": "The class gg-kot used on the rows of the grid above keeps it multi-colum on tablets, but makes it single-column on smartphones."
+          }
+        },
+        "nesting": {
+          "title": "nesting",
+          "text": "This grid allows nesting. It is completely possible split a column in more columns."
+        }
+      }
+    },
+    "contribute": {
+      "text": "To contribute on this project, feel free to fork it on "
+    }
+  }
+}
