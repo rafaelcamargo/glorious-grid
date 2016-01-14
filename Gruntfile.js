@@ -5,13 +5,8 @@ module.exports = function(grunt) {
     stylus: {
       src: {
         options: {
-          banner: '/*\n' +
-                  '* <%= pkg.name %> v<%= pkg.version %> ' +
-                  '(<%= grunt.template.today("yyyy-mm-dd") %>)\n' +
-                  '* License: <%= pkg.license %>\n' +
-                  '* Url: <%= pkg.url %>\n' +
-                  '* Repository: <%= pkg.repository.url %>\n' +
-                  '*/\n',
+          banner: '/*! <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> (<%= pkg.repository.url %>)\n' +
+                  '!*/',
           compress: true
         },
         files: {
@@ -23,14 +18,41 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          'doc/assets/css/doc.css': 'doc/assets/styl/*.styl'
+          'doc/assets/css/doc.min.css': 'doc/assets/styl/*.styl'
+        }
+      }
+    },
+    cssmin: {
+      options: {
+        keepSpecialComments: 1,
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      src: {
+        files: {
+          'dist/ggrid.min.css': 'dist/ggrid.min.css'
+        }
+      },
+      doc: {
+        files: {
+          'doc/assets/css/doc.min.css': 'doc/assets/css/doc.min.css'
         }
       }
     },
     concat: {
       dist: {
         files: {
-          'doc/assets/dist.js': 'doc/assets/js/**/*.js'
+          'doc/assets/dist.min.js': 'doc/assets/js/**/*.js'
+        }
+      }
+    },
+    uglify: {
+      options: {
+        mangle: false
+      },
+      dist: {
+        files: {
+          'doc/assets/dist.min.js': 'doc/assets/dist.min.js'
         }
       }
     },
@@ -59,11 +81,11 @@ module.exports = function(grunt) {
     watch: {
       src: {
         files: ['src/**/*.styl'],
-        tasks: ['stylus:src']
+        tasks: ['stylus:src', 'cssmin:src']
       },
       doc: {
         files: ['doc/assets/styl/**/*.styl'],
-        tasks: ['stylus:doc']
+        tasks: ['stylus:doc', 'cssmin:doc']
       },
       script: {
         files: ['doc/assets/js/**/*.js'],
@@ -77,12 +99,15 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-jade-i18n');
   grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('build', ['stylus', 'concat', 'jade']);
-  grunt.registerTask('start', ['stylus', 'http-server', 'watch']);
+  grunt.registerTask('dev', ['stylus', 'concat', 'jade']);
+  grunt.registerTask('build', ['dev', 'cssmin', 'uglify']);
+  grunt.registerTask('start', ['dev', 'http-server', 'watch']);
 
 };

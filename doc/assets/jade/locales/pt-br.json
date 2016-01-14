@@ -1,7 +1,7 @@
 {
   "project": {
-    "title": "glorious grid",
-    "slogan": "simples. leve. limpo."
+    "title": "Glorious Grid",
+    "slogan": "Simples. Leve. Limpo."
   },
   "menu": {
     "intro": "introdução",
@@ -14,7 +14,7 @@
     "pt": "pt"
   },
   "button": {
-    "download": "baixar (7kb)"
+    "download": "baixar (6,4kb)"
   },
   "section": {
     "intro": {
@@ -47,11 +47,15 @@
         },
         "responsiveness": {
           "title": "responsividade",
-          "text": "Esse grid foi projetado para ser responsivo mantendo a marcação o mais simples e limpa possível. Assim, por padrão, o grid transforma-se em um grid de apenas 1 coluna em telas menores que 960 pixels, mas é possível mantê-lo com múltiplas colunas tanto em tablets, smartphones, ou ambos."
+          "text": "Esse grid foi projetado para ser responsivo mantendo a marcação o mais simples e limpa possível. Assim, por padrão, o grid transforma-se em um grid de apenas 1 coluna em telas menores que 960 pixels, mas é possível mantê-lo com múltiplas colunas tanto em tablets, smartphones, ou ambos.",
+          "notes": {
+            "mobile": "A classe gg-kom usada nas linhas do grid acima o mantém com múltiplas colunas em smartphones e tablets.",
+            "tablet": "A classe gg-kot usada nas linhas do grid acima o mantém com múltiplas colunas em tablets, mas o torna grid de 1 coluna em smartphones."
+          }
         },
         "nesting": {
-          "title": "nesting",
-          "text": "This grid allows nesting. It is completely possible split a column in more columns."
+          "title": "aninhamento",
+          "text": "Esse grid permite aninhamento. É completamente possível dividir uma coluna em mais colunas."
         }
       }
     },

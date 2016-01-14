@@ -2,8 +2,8 @@ mixin section-usage-topic(title, text, css)
   .gg-row.gg-vof-5
     .gg-col-12
       h3 #{title}
-        if css
-          span.cp-class-name-box #{css}
+      if css
+        span.cp-class-name-box #{css}
   .gg-row.gg-vof-3
     .gg-col-12
       p #{text}
@@ -17,3 +17,8 @@ mixin section-usage-topic-sample()
   +section-usage-topic-content()
     .doc-sample
       block
+
+mixin section-usage-topic-note(note)
+  .gg-row.gg-vof-1
+    .gg-col-12
+      .cp-note #{note}

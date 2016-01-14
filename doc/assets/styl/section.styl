@@ -1,4 +1,5 @@
 @require 'var'
+@require 'func'
 
 section
   position relative
@@ -8,10 +9,18 @@ section
     background-color $color-grey-light
   h1, h2, h3
     text-transform capitalize
+  h3
+    display inline-block
   &.cp-section-cover
     padding 190px 0
     background-color transparent
-    h1
-      letter-spacing -3px
     h1, h2, h3
       color $color-tertiary
+
++breakpoint('xs')
+  section
+    padding 35px 0
+    &.cp-section-cover
+      padding 130px 0
+    h3
+      display block

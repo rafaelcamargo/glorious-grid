@@ -1,5 +1,5 @@
 var WebFontConfig = {
-  google: { families: [ 'Source+Sans+Pro:400,300:latin' ] }
+  google: { families: [ 'Source+Sans+Pro:300:latin' ] }
 };
 
 (function() {

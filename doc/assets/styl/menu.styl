@@ -6,7 +6,6 @@
   bottom 0
   width 100%
   background-color transparent
-  transition(all, 500ms)
   &.is-fixed
     position fixed
     top 0
@@ -15,8 +14,12 @@
     background-color alpha($color-primary, 0.9)
     z-index 10
     .cp-menu
-      [class^="icon-"]:before, [class*=" icon-"]:before  
-        opacity 0
+      li
+        &.is-disabled
+          a:focus, a:hover, a:active
+            opacity 1
+        &:before
+          opacity 0
 
 .cp-menu
   margin 0 auto
@@ -30,6 +33,7 @@
     width 25%
     text-align center
     text-transform capitalize
+    transition(all, 500ms)
     &.is-disabled
       a, a:visited, a:focus, a:hover, a:active
         opacity 0.5
@@ -39,11 +43,9 @@
           opacity 1
   a, a:visited, a:focus, a:hover, a:active
     position relative
-    top 0
     display block
     padding 25px 0
     color $color-white
-    text-decoration none
     transition(all, 500ms)
     &:before
       position absolute
@@ -68,4 +70,32 @@
     font-size 16px
     z-index -1
     opacity 1
+    border 1px solid transparent
+    border-radius(50%)
     transition(all, 500ms)
+
++breakpoint('xs')
+  .cp-menu
+    a, a:visited, a:focus, a:hover, a:active
+      font-size 0.75em
+  .cp-menu-container
+    &.is-fixed
+      .cp-menu
+        margin 0
+        [class^="icon-"]:before, [class*=" icon-"]:before
+          margin-left -16px
+          width 30px
+        li
+          width 50px
+          &:before
+            top 18px
+            padding-top 7px
+            opacity 1
+          &.is-selected
+            &:before
+              border 1px solid $color-white
+              border-radius(50%)
+        a, a:visited, a:focus, a:hover, a:active
+          color transparent
+          &:before
+            opacity 0

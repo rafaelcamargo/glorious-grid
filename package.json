@@ -1,6 +1,6 @@
 {
   "name": "ggrid",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "license": "MIT",
   "url": "http://rafaelcamargo.github.io/glorious-grid/welcome/",
   "repository": {
@@ -10,7 +10,9 @@
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-stylus": "^0.22.0",
+    "grunt-contrib-uglify": "^0.11.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-http-server": "^1.13.0",
     "grunt-jade-i18n": "^0.3.4",

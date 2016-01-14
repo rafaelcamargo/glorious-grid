@@ -1,7 +1,7 @@
 {
   "project": {
-    "title": "glorious grid",
-    "slogan": "simple. light. clean."
+    "title": "Glorious Grid",
+    "slogan": "Simple. Light. Clean."
   },
   "menu": {
     "intro": "introduction",
@@ -14,7 +14,7 @@
     "pt": "pt"
   },
   "button": {
-    "download": "download (7kb)"
+    "download": "download (6.4kb)"
   },
   "section": {
     "intro": {
@@ -47,7 +47,11 @@
         },
         "responsiveness": {
           "title": "responsiveness",
-          "text": "This grid was designed to allow responsiveness keeping markup as simple and clean as possible. So, its default behavior is to make the grid single column when the screen width is lower than 960 pixels, but it can stay multi-column either on tablets, smartphones or both."
+          "text": "This grid was designed to allow responsiveness keeping markup as simple and clean as possible. So, its default behavior is to make the grid single column when the screen width is lower than 960 pixels, but it can stay multi-column either on tablets, smartphones or both.",
+          "notes": {
+            "mobile": "The class gg-kom used on the rows of the grid above keeps it multi-colum on smartphones and tablets",
+            "tablet": "The class gg-kot used on the rows of the grid above keeps it multi-colum on tablets, but makes it single-column on smartphones."
+          }
         },
         "nesting": {
           "title": "nesting",

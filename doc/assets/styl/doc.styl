@@ -10,14 +10,20 @@
     color $color-primary
     text-align center
     line-height 40px
-    text-overflow ellipsis
     white-space nowrap
     overflow hidden
     border-top 1px solid $color-white
   [class*="gg-col"] + [class*="gg-col"]
     border-left 1px solid $color-white
-
+      
 +breakpoint('xs-sm')
   .doc-sample
     .gg-row + .gg-row:not([class*="gg-vof"])
       margin-top 10px
+    .gg-row + .gg-row.gg-kom:not([class*="gg-vof"])
+      margin-top 0
+      
++breakpoint('sm')
+  .doc-sample
+    .gg-row + .gg-row.gg-kot:not([class*="gg-vof"])
+      margin-top 0
