@@ -1,0 +1,29 @@
+@require 'var'
+@require 'func'
+
+.doc-sample
+  > .gg-row
+    margin-left 0
+    margin-right 0
+  [class*="gg-col"]
+    background-color alpha($color-primary, 0.2)
+    color $color-primary
+    text-align center
+    line-height 40px
+    white-space nowrap
+    overflow hidden
+    border-top 1px solid $color-white
+  [class*="gg-col"] + [class*="gg-col"]
+    border-left 1px solid $color-white
+      
++breakpoint('xs-sm')
+  .doc-sample
+    .gg-row + .gg-row:not([class*="gg-vof"])
+      margin-top 10px
+    .gg-row + .gg-row.gg-kom:not([class*="gg-vof"])
+      margin-top 0
+      
++breakpoint('sm')
+  .doc-sample
+    .gg-row + .gg-row.gg-kot:not([class*="gg-vof"])
+      margin-top 0

@@ -1,0 +1,96 @@
+<!DOCTYPE html><html><head><title>Glorious Grid: Simples. Leve. Limpo.</title><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="HandheldFriendly" content="true"><link rel="stylesheet" type="text/css" href="../../dist/ggrid.min.css"><link rel="stylesheet" type="text/css" href="../assets/css/doc.min.css"><link rel="icon" type="image/png" href="../assets/img/favicon.png"></head><body><ul class="cp-menu-lang"><li data-lang="en-us">en</li><li data-lang="pt-br">pt</li></ul><section class="cp-section-cover is-text-center"><div class="gg-box"><h1 class="cp-logo icon-grid-circle">Glorious Grid</h1><h3>Simples. Leve. Limpo.</h3></div><div data-js="menu" class="cp-menu-container"><ul class="cp-menu"><li data-js="menu-intro" class="icon-star"><a href="javascript:void(0)">introdução</a></li><li data-js="menu-install" class="icon-install"><a href="javascript:void(0)">instalar</a></li><li data-js="menu-usage" class="icon-code"><a href="javascript:void(0)">usar</a></li><li data-js="menu-contribute" class="icon-fork"><a href="javascript:void(0)">contribuir</a></li></ul></div></section><section data-js="section-intro" class="is-text-center"><div class="gg-box"><div class="gg-row"><div class="gg-col-12"><h2>introdução</h2></div></div><div class="gg-row gg-vof-5 gg-kot"><div class="gg-col-8 gg-hof-2"><p>Esse grid foi feito para front enders que curtem simplicidade e que não curtem a maneira com a qual Bootstrap e Foundation tratam seus grids. Diferentemente deles, esse grid não requer várias classes css de acordo com o tamanho da tela, mantendo a marcação limpa.</p></div></div></div></section><section data-js="section-install" class="is-text-center"><div class="gg-box"><div class="gg-row"><div class="gg-col-12"><h2>instalar</h2></div></div><div class="gg-row gg-vof-5 gg-kot"><div class="gg-col-8 gg-hof-2"><p>Você pode instalá-lo usando npm ou pode, se não manjar de gerenciamento de dependências, baixar o código e inserí-lo manualmente:</p></div></div><div class="gg-row gg-vof-3 gg-kot"><div class="gg-col-4 gg-hof-2"><code class="is-text-center">npm install ggrid --save</code></div><div class="gg-col-4"><a href="javascript:void(0)" class="cp-btn cp-btn-block">baixar (6,4kb)</a></div></div></div></section><section data-js="section-usage"><div class="gg-box"><div class="gg-row is-text-center"><div class="gg-col-12"><h2>usar</h2></div></div><div class="gg-row gg-vof-5"><div class="gg-col-12"><h3>caixa</h3><span class="cp-class-name-box">.gg-box</span></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><p>Esse é o container padrão desse grid. Ele limita a largura do grid ao máximo de 960 pixels.</p></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><div class="doc-sample"><div class="gg-row gg-kom"><div class="gg-col-6">6 cols</div><div class="gg-col-6">6 cols</div></div></div></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><pre><code><div class="gg-box">
+  <div class="gg-row gg-kom">
+    <div class="gg-col-6">6 cols</div>
+    <div class="gg-col-6">6 cols</div>
+  </div>
+</div></code></pre></div></div><div class="gg-row gg-vof-5"><div class="gg-col-12"><h3>linha</h3><span class="cp-class-name-box">.gg-row</span></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><p>Toda coluna deve ser filha direta de uma linha.</p></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><div class="doc-sample"><div class="gg-row gg-kom"><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div></div><div class="gg-row gg-kom"><div class="gg-col-6">6 cols</div><div class="gg-col-6">6 cols</div></div><div class="gg-row gg-kom"><div class="gg-col-12">12 cols</div></div></div></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><pre><code><div class="gg-box">
+  <div class="gg-row gg-kom">
+    <div class="gg-col-3">3 cols</div>
+    <div class="gg-col-3">3 cols</div>
+    <div class="gg-col-3">3 cols</div>
+    <div class="gg-col-3">3 cols</div>
+  </div>
+  <div class="gg-row gg-kom">
+    <div class="gg-col-6">6 cols</div>
+    <div class="gg-col-6">6 cols</div>
+  </div>
+  <div class="gg-row gg-kom">
+    <div class="gg-col-12">12 cols</div>
+  </div>
+</div></code></pre></div></div><div class="gg-row gg-vof-5"><div class="gg-col-12"><h3>coluna</h3><span class="cp-class-name-box">.gg-col-[1...12]</span></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><p>É possível dividir uma linha em até 12 colunas.</p></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><div class="doc-sample"><div class="gg-row gg-kom"><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div><div class="gg-col-1">1 col</div></div></div></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><pre><code><div class="gg-box">
+  <div class="gg-row gg-kom">
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+    <div class="gg-col-1">1 col</div>
+  </div>
+</div></code></pre></div></div><div class="gg-row gg-vof-5"><div class="gg-col-12"><h3>deslocamento horizontal</h3><span class="cp-class-name-box">.gg-hof-[1...11]</span></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><p>É possível deslocar horizontalmente uma coluna em até 11 vezes o valor da sua largura.</p></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><div class="doc-sample"><div class="gg-row gg-kom"><div class="gg-col-6 gg-hof-6">6 cols</div></div><div class="gg-row gg-kom"><div class="gg-col-6">6 cols</div></div><div class="gg-row gg-kom"><div class="gg-col-3 gg-hof-6">3 cols</div><div class="gg-col-1 gg-hof-2">1 col</div></div></div></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><pre><code><div class="gg-box">
+  <div class="gg-row">
+    <div class="gg-col-6 gg-hof-6">6 cols</div>
+  </div>
+  <div class="gg-row">
+    <div class="gg-col-6">6 cols</div>
+  </div>
+  <div class="gg-row">
+    <div class="gg-col-3 gg-hof-6">3 cols</div>
+    <div class="gg-col-1 gg-hof-2">1 col</div>
+  </div>
+</div></code></pre></div></div><div class="gg-row gg-vof-5"><div class="gg-col-12"><h3>deslocamento vertical</h3><span class="cp-class-name-box">.gg-vof-[1...12]</span></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><p>O grid oferece também o deslocamento vertical. É possível descolar verticalmente uma linha de 10 a 120 pixels.</p></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><div class="doc-sample"><div class="gg-row gg-kom"><div class="gg-col-12">12 cols</div></div><div class="gg-row gg-kom gg-vof-3"><div class="gg-col-6">6 cols</div></div><div class="gg-row gg-kom gg-vof-6"><div class="gg-col-9">9 cols</div></div></div></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><pre><code><div class="gg-row gg-kom">
+  <div class="gg-col-12">12 cols</div>
+</div>
+<div class="gg-row gg-kom gg-vof-3">
+  <div class="gg-col-6">6 cols</div>
+</div>
+<div class="gg-row gg-kom gg-vof-6">
+  <div class="gg-col-9">9 cols</div>
+</div></code></pre></div></div><div class="gg-row gg-vof-5"><div class="gg-col-12"><h3>responsividade</h3><span class="cp-class-name-box">.gg-kot, .gg-kom</span></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><p>Esse grid foi projetado para ser responsivo mantendo a marcação o mais simples e limpa possível. Assim, por padrão, o grid transforma-se em um grid de apenas 1 coluna em telas menores que 960 pixels, mas é possível mantê-lo com múltiplas colunas tanto em tablets, smartphones, ou ambos.</p></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><div class="doc-sample"><div class="gg-row gg-kom"><div class="gg-col-6">6 cols</div><div class="gg-col-6">6 cols</div></div><div class="gg-row gg-kom"><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div></div></div></div></div><div class="gg-row gg-vof-1"><div class="gg-col-12"><div class="cp-note">A classe gg-kom usada nas linhas do grid acima o mantém com múltiplas colunas em smartphones e tablets.</div></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><pre><code><div class="gg-row gg-kom">
+  <div class="gg-col-6">6 cols</div>
+  <div class="gg-col-6">6 cols</div>
+</div>
+<div class="gg-row gg-kom">
+  <div class="gg-col-3">3 cols</div>
+  <div class="gg-col-3">3 cols</div>
+  <div class="gg-col-3">3 cols</div>
+  <div class="gg-col-3">3 cols</div>
+</div></code></pre></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><div class="doc-sample"><div class="gg-row gg-kot"><div class="gg-col-6">6 cols</div><div class="gg-col-6">6 cols</div></div><div class="gg-row gg-kot"><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div></div></div></div></div><div class="gg-row gg-vof-1"><div class="gg-col-12"><div class="cp-note">A classe gg-kot usada nas linhas do grid acima o mantém com múltiplas colunas em tablets, mas o torna grid de 1 coluna em smartphones.</div></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><pre><code><div class="gg-row gg-kot">
+  <div class="gg-col-6">6 cols</div>
+  <div class="gg-col-6">6 cols</div>
+</div>
+<div class="gg-row gg-kot">
+  <div class="gg-col-3">3 cols</div>
+  <div class="gg-col-3">3 cols</div>
+  <div class="gg-col-3">3 cols</div>
+  <div class="gg-col-3">3 cols</div>
+</div></code></pre></div></div><div class="gg-row gg-vof-5"><div class="gg-col-12"><h3>aninhamento</h3></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><p>Esse grid permite aninhamento. É completamente possível dividir uma coluna em mais colunas.</p></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><div class="doc-sample"><div class="gg-row"><div class="gg-col-12">12 cols<div class="gg-row gg-kom"><div style="line-height:122px" class="gg-col-6">6 cols</div><div class="gg-col-6">6 cols<div class="gg-row gg-kom"><div class="gg-col-7">7 cols<div class="gg-row gg-kom"><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div><div class="gg-col-3">3 cols</div></div></div><div class="gg-col-5">5 cols<div class="gg-row gg-kom"><div class="gg-col-7">7 cols</div><div class="gg-col-5">5 cols</div></div></div></div></div></div></div></div></div></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><pre><code><div class="gg-row gg-kom">
+  <div class="gg-col-12">12 cols
+    <div class="gg-row gg-kom">
+      <div class="gg-col-6">6 cols</div>
+      <div class="gg-col-6">6 cols
+        <div class="gg-row gg-kom">
+          <div class="gg-col-7">7 cols
+            <div class="gg-row gg-kom">
+              <div class="gg-col-3">3 cols</div>
+              <div class="gg-col-3">3 cols</div>
+              <div class="gg-col-3">3 cols</div>
+              <div class="gg-col-3">3 cols</div>
+            </div>
+          </div>
+          <div class="gg-col-5">5 cols
+            <div class="gg-row gg-kom">
+              <div class="gg-col-7">7 cols</div>
+              <div class="gg-col-5">5 cols</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></code></pre></div></div></div></section><section data-js="section-contribute" class="is-text-center"><div class="gg-box"><div class="gg-row"><div class="gg-col-12"><h2>contribuir</h2></div></div><div class="gg-row gg-vof-3"><div class="gg-col-12"><p>Para contribuir com esse projeto, fique à vontade para forká-lo no <a href="https://github.com/rafaelcamargo/glorious-grid">Github</a></p></div></div></div></section><script type="text/javascript" src="../assets/dist.min.js"></script></body></html>

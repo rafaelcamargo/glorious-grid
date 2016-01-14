@@ -1,0 +1,101 @@
+@require 'var'
+@require 'func'
+
+.cp-menu-container
+  position absolute
+  bottom 0
+  width 100%
+  background-color transparent
+  &.is-fixed
+    position fixed
+    top 0
+    left 0
+    bottom auto
+    background-color alpha($color-primary, 0.9)
+    z-index 10
+    .cp-menu
+      li
+        &.is-disabled
+          a:focus, a:hover, a:active
+            opacity 1
+        &:before
+          opacity 0
+
+.cp-menu
+  margin 0 auto
+  width 100%
+  max-width 450px
+  list-style-type none
+  clearfix()
+  li
+    position relative
+    float left
+    width 25%
+    text-align center
+    text-transform capitalize
+    transition(all, 500ms)
+    &.is-disabled
+      a, a:visited, a:focus, a:hover, a:active
+        opacity 0.5
+    &.is-selected
+      a, a:visited, a:focus, a:hover, a:active
+        &:before
+          opacity 1
+  a, a:visited, a:focus, a:hover, a:active
+    position relative
+    display block
+    padding 25px 0
+    color $color-white
+    transition(all, 500ms)
+    &:before
+      position absolute
+      bottom 10px
+      left 50%
+      margin-left -3px
+      content ' '
+      width 6px
+      height 6px
+      background-color $color-white
+      opacity 0
+      border-radius(3px)
+      transition(all, 500ms)
+  [class^="icon-"]:before, [class*=" icon-"]:before
+    position absolute
+    top 0
+    left 50%
+    margin-left -12px
+    width 24px
+    height 24px
+    color $color-white
+    font-size 16px
+    z-index -1
+    opacity 1
+    border 1px solid transparent
+    border-radius(50%)
+    transition(all, 500ms)
+
++breakpoint('xs')
+  .cp-menu
+    a, a:visited, a:focus, a:hover, a:active
+      font-size 0.75em
+  .cp-menu-container
+    &.is-fixed
+      .cp-menu
+        margin 0
+        [class^="icon-"]:before, [class*=" icon-"]:before
+          margin-left -16px
+          width 30px
+        li
+          width 50px
+          &:before
+            top 18px
+            padding-top 7px
+            opacity 1
+          &.is-selected
+            &:before
+              border 1px solid $color-white
+              border-radius(50%)
+        a, a:visited, a:focus, a:hover, a:active
+          color transparent
+          &:before
+            opacity 0

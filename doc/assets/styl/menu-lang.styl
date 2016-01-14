@@ -1,0 +1,17 @@
+@require 'var'
+
+.cp-menu-lang
+  position fixed
+  top 20px
+  right 20px
+  list-style-type none
+  z-index 20
+  li
+    display inline
+    padding 5px
+    color $color-white
+    font-size 0.75em
+    text-transform uppercase
+    cursor pointer
+    &.is-active
+      border-bottom 1px solid $color-white

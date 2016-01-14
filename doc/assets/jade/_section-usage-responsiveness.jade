@@ -1,0 +1,22 @@
+- var title= $i18n.section.usage.topics.responsiveness.title
+- var text= $i18n.section.usage.topics.responsiveness.text
+- var note_tablet= $i18n.section.usage.topics.responsiveness.notes.tablet
+- var note_mobile= $i18n.section.usage.topics.responsiveness.notes.mobile
+
++section-usage-topic(title, text, '.gg-kot, .gg-kom')
+
++section-usage-topic-sample()
+  include _section-usage-responsiveness-sample-mobile.jade
+
++section-usage-topic-note(note_mobile)
+
++section-usage-topic-content()
+  include _section-usage-responsiveness-code-mobile.jade
+
++section-usage-topic-sample()
+  include _section-usage-responsiveness-sample-tablet.jade
+
++section-usage-topic-note(note_tablet)
+
++section-usage-topic-content()
+  include _section-usage-responsiveness-code-tablet.jade

@@ -1,10 +1,9 @@
 @require 'gg-func'
-	
+  
 [class*="gg-col"]
-	float left
-	margin-left buildGutter(1)
+  float left
+  padding 0 ($base-width-gutter/2 * 1px)
+  min-height 1px
+  box-sizing border-box
 
 buildCols(12)
-
-@media screen and (max-width: 959px)
-	buildCols(1)

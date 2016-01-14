@@ -1,58 +1,99 @@
 @require 'gg-var'
 
-
 // Columns Builder
 
 buildCols()
-	for num in (1..GG_TOTAL_COLS)
-		if(arguments == 12)
-			buildColForTwelveColsGrid(num)
-		else
-			buildColForOneColGrid(num)
+  for num in (1..$total-cols)
+      buildColForTwelveColsGrid(num)
+      buildColForOneColGrid(num)
+  setMarginTopForSiblingCols($base-sibling-col-offset)
 
 buildColForTwelveColsGrid(num)
-	.gg-col-{num}
-		width getPercentLength(calcColumnLength(num))
+  .gg-col-{num}
+    width getPercent(num)
 
 buildColForOneColGrid(num)
-	.gg-col-{num}
-		width getPercentLength(calcColumnLength(12))
-	if(num == 12)
-		setMarginTopForSiblingCols(10)
+  buildColForOneColGridOnMobile(num)
+  buildColForOneColGridOnTablet(num)
 
-getPercentLength()
-	arguments/GG_BASE_WIDTH_CONTAINER * 100%
+buildColForOneColGridOnMobile(num)
+  +breakpoint('xs-sm')
+    .gg-col-{num}
+      width getPercent($total-cols)
+    &.gg-kom
+      > .gg-col-{num}
+        width getPercent(num)
+      
+buildColForOneColGridOnTablet(num)
+  +breakpoint('sm')
+    .gg-col-{num}
+      width getPercent($total-cols)
+    &.gg-kot
+      > .gg-col-{num}
+        width getPercent(num)
 
-calcColumnLength()
-	GG_BASE_WIDTH_COL*arguments + GG_BASE_WIDTH_GUTTER*(arguments - 1)
-	
+getPercent()
+  arguments/$total-cols * 100%
+
 setMarginTopForSiblingCols()
-	[class*="gg-col"] + [class*="gg-col"]
-		margin-top arguments * 1px;
-
+  +breakpoint('xs-sm')
+    [class*="gg-col"] + [class*="gg-col"]
+      margin-top arguments * 1px
+    .gg-kom
+      > [class*="gg-col"] + [class*="gg-col"]
+        margin-top 0
+  +breakpoint('sm')
+    .gg-kot
+      > [class*="gg-col"] + [class*="gg-col"]
+        margin-top 0
+        
+buildRowMargin()
+  $base-width-gutter/2 * -1px
 
 // Helpers
 
 clearfix()
-	zoom 1
-	&:after
-		content " "
-		display table
-		clear both
+  zoom 1
+  &:after
+    content " "
+    display table
+    clear both
 
 createVerticalOffsets()
-	for num in (1..10)
-		.gg-voff-{num}
-			margin-top num * 10px
-			
+  for num in (1..12)
+    .gg-vof-{num}
+      margin-top num * 10px
+      
 createHorizontalOffsets()
-	for num in (1..GG_TOTAL_COLS - 1)
-		.gg-hoff-{num}
-			if(arguments == 12)
-				margin-left getPercentLength(calcColumnLength(num) + GG_BASE_WIDTH_GUTTER * 2)
-			else
-				margin-left getPercentLength(GG_BASE_WIDTH_GUTTER)
+  for num in (1..$total-cols - 1)
+    .gg-hof-{num}
+        margin-left getPercent(num)
+    +breakpoint('xs-sm')
+      .gg-hof-{num}
+        margin-left 0
+      .gg-kom
+        .gg-hof-{num}
+            margin-left getPercent(num)
+    +breakpoint('sm')
+      .gg-kot
+        .gg-hof-{num}
+            margin-left getPercent(num)
 
-buildGutter()
-	gutter = GG_BASE_WIDTH_GUTTER/GG_BASE_WIDTH_CONTAINER * 100%
-	gutter * arguments
+// Breakpoints
+
+breakpoint(size)
+  if(size == 'xs')
+    @media screen and (max-width $screen-xs-max)
+      {block}
+  else if (size == 'xs-sm')
+    @media screen and (max-width $screen-sm-max)
+      {block}
+  else if (size == 'sm')
+    @media screen and (min-width $screen-xs-max) and (max-width $screen-sm-max)
+      {block}
+  else if (size == 'sm-md')
+    @media screen and (min-width $screen-sm-min) and (max-width $screen-md-max)
+      {block}
+  else if (size == 'md')
+    @media screen and (min-width $screen-sm-max) and (max-width $screen-md-max)
+      {block}
